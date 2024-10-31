@@ -10,6 +10,7 @@ import java.util.List;
  *
  * @author alexandre.rcosta
  */
+//quem montou todo o código foi eu e a ester
 public class ClienteADO {
     private Connection connection;
     
@@ -17,8 +18,18 @@ public class ClienteADO {
         connection = Database.getconnection(); // "database.getconnection" para obter a conexão
     }
     
+    public void criarCliente(Cliente cliente) throws SQLException{
+        
+        String sql = "insert into clientes (nome, email, telefone, data_cadastro) values (?, ?, ?, ?)";
+        PreparedStatement pstmt = connection.prepareStatement(sql);
+        pstmt.setString(1, cliente.getNome());
+        
+        
+    }
+    
     
 }
+
 
 
 **ESTER O CÓDIGO AINDA ESTÁ INCOMPLETO, AJUDA O PAI AÍ...
