@@ -1,0 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.clienteado;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ *
+ * @author alexandre.rcosta
+ */
+public class ClienteADO {
+    private Connection connection;
+    
+    public ClienteADO(){
+        connection = Database.getconnection(); // "database.getconnection" para obter a conexão
+    }
+    
+    
+}
+
+
+**ESTER O CÓDIGO AINDA ESTÁ INCOMPLETO, AJUDA O PAI AÍ...
