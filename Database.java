@@ -8,6 +8,7 @@ package com.mycompany.database;
  *
  * @author alexandre.rcosta
  */
+//Código montado pelo alexandre e ester.
 public class Database {
     public static Connection getConnection(){
         String url = "jdbc:mysql://localhost:3306/seu_banco"; 
