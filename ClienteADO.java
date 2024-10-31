@@ -11,7 +11,7 @@ import java.util.List;
  * @author alexandre.rcosta
  */
 
-//quem montou todo o código foi eu e a ester
+//quem montou todo o código foi o alexandre e a ester
 
 public class ClienteADO {
     private Connection connection;
@@ -19,7 +19,7 @@ public class ClienteADO {
     public ClienteADO(){
         connection = Database.getconnection(); // "database.getconnection" para obter a conexão
     }
-    
+    // --- Utilizei o "Throws SQLException" para que, caso tenha problemas, que seja necessário arrumá-los.
     public void criarCliente(Cliente cliente) throws SQLException{
         
         String sql = "insert into clientes (nome, email, telefone, data_cadastro) values (?, ?, ?, ?)";
@@ -31,7 +31,7 @@ public class ClienteADO {
         pstmt.executeUpdate();
          
     }
-    
+    //Notas do Alexandre: Logo abaixo tentei deixar as linhas de código mais funcionais e pequenas possíveis, para evitar bagunça e várias linhas de códigos descenessários, tentei usar o Chatgpt mas não ficava do jeito que queria, então fiz tudo na "raça"
      public List<Cliente> listarClientes() throws SQLException {
         List<Cliente> clientes = new ArrayList<>();
         String sql = "SELECT * FROM clientes";
@@ -84,4 +84,4 @@ public class ClienteADO {
     }
 }
 
-**ESTER O CÓDIGO ESTÁ COMPLETO, MAS DÊ UMA OLHADA E MODIFIQUE ALGUMAS COISAS.
+**NOTAS DO ALEXANDRE: ESTER O CÓDIGO ESTÁ COMPLETO, MAS DÊ UMA OLHADA E MODIFIQUE ALGUMAS COISAS.
